@@ -26,9 +26,37 @@ title: HTML5 Boilerplate Middleman
         head.appendChild(trial);
     })();
 
+    var fadeTime = 1 * 1000;
+
+//    var fadeInHeader = 0.4 * 1000;
+//    var fadeInCard = 0.6 * 1000;
+//    var fadeInInput = 1 * 1000;
+//    var fadeToCard2 = 1.5 * 1000;
+
+    var fadeInHeader = 0.4 * 1000;
+    var fadeInCard = 3 * 1000;
+    var fadeInInput = 6 * 1000;
+    var fadeToCard2 = 10 * 1000;
+
     setTimeout(function() {
-        $('#head_honcho').fadeIn(5000)
-    }, 400);
+        $('#head_honcho').fadeIn(fadeTime)
+    }, fadeInHeader);
+
+    setTimeout(function() {
+        $("#card_1").fadeIn(fadeTime);
+    }, fadeInCard)
+
+    setTimeout(function() {
+        $("input").fadeTo(fadeTime, 1);
+    }, fadeInInput)
+
+    setTimeout(function() {
+        $("#card_1").fadeOut(fadeTime)
+    }, fadeToCard2)
+
+    setTimeout(function() {
+        $("#card_2").fadeIn(fadeTime)
+    }, fadeToCard2 + fadeTime)
 
 </script>
 
@@ -82,6 +110,18 @@ title: HTML5 Boilerplate Middleman
         box-shadow: 0 8px 6px -6px #999;
     }
 
+    p {
+        font-family: "Courier", Courier;
+    }
+
+    #card_1, #card_2 {
+        display: none;
+    }
+
+    #card_2 img {
+        width: 150px;
+        margin-top: 20px;
+    }
 
     /*font-family: 'Sackers Gothic Std Medium'*/
     /*font-family: 'Sackers Heavy Roman';*/
@@ -94,14 +134,14 @@ title: HTML5 Boilerplate Middleman
     <h1>Brittany <span class="amp">&amp;</span>James</h1>
   </div>
 
-  <input type="text" placeholder="Enter code here">
+  <input type="text" placeholder="Enter code here" style="opacity: 0;">
 
-  <div class="card_1">
-    <h2>This is what we call good Typography</h2>
-
-    <h3>Yes, this is great typography</h3>
-    <h4>And now for our fourth hierarchy</h4>
-
-    <p>Hello there</p>
+  <div class="card" id="card_1">
+    <h3>Hello there, Bortt.</h3>
+    <p>Are you ready to play a game?</p>
+  </div>
+  <div class="card" id="card_2">
+    <img src="img/clothespin.jpg" alt="The Token!"/>
+    <p>Keep an eye out for these guys.</p>
   </div>
 </div>
