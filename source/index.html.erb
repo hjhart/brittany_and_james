@@ -25,6 +25,13 @@ title: HTML5 Boilerplate Middleman
         var head = document.getElementsByTagName("head")[0];
         head.appendChild(trial);
     })();
+
+    setTimeout(function() {
+        $('#head_honcho').fadeIn(5000)
+    }, 400);
+
+
+
 </script>
 
 <style type="text/css">
@@ -55,6 +62,7 @@ title: HTML5 Boilerplate Middleman
         font-family: 'Sackers Gothic Std Heavy';
         padding: 10px 20px;
         text-align: center;
+        text-transform: lowercase;
     }
 
     span.amp {
@@ -64,14 +72,24 @@ title: HTML5 Boilerplate Middleman
         padding-right: 7px;
     }
 
+    .card {
+        margin: 0 auto;
+        width: 50%;
+        margin-top: 100px;
+        border: 1px solid grey;
+        -webkit-box-shadow: 0 8px 6px -6px #999;
+        -moz-box-shadow: 0 8px 6px -6px #999;
+        box-shadow: 0 8px 6px -6px #999;
+    }
+
+
     /*font-family: 'Sackers Gothic Std Medium'*/
     /*font-family: 'Sackers Heavy Roman';*/
     /*font-family: 'Sackers Gothic Light'*/
-
     /*font-family: 'Sackers Gothic Std Heavy'*/
 </style>
 
-<div>
+<div id="head_honcho" style="display: none">
   <div>
     <h1>Brittany <span class="amp">&amp;</span>James</h1>
   </div>
@@ -79,11 +97,9 @@ title: HTML5 Boilerplate Middleman
   <input type="text" placeholder="Enter code here">
 
   <div class="card">
-    <h1>This is what we call good Typography</h1>
+    <h2>This is what we call good Typography</h2>
 
-    <h2>Yes, this is great typography</h2>
-
-    <h3>Mmmhmm</h3>
+    <h3>Yes, this is great typography</h3>
     <h4>And now for our fourth hierarchy</h4>
 
     <p>Hello there</p>
