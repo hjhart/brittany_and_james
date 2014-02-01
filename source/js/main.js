@@ -93,6 +93,9 @@ $(document).ready(function() {
             case "ring":
                 index = 9;
                 break;
+            case "danny":
+                index = 10;
+                break;
             default:
                 return false;
         }
